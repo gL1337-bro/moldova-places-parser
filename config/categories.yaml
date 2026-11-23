@@ -1,0 +1,88 @@
+categories:
+  cafe:
+    tags:
+      - amenity=cafe
+    label: "Кафе"
+  restaurant:
+    tags:
+      - amenity=restaurant
+    label: "Рестораны"
+  bar:
+    tags:
+      - amenity=bar
+      - amenity=pub
+    label: "Бары"
+  bakery:
+    tags:
+      - shop=bakery
+      - craft=bakery
+    label: "Пекарни"
+  pastry:
+    tags:
+      - shop=pastry
+      - shop=confectionery
+    label: "Кондитерские"
+  beauty:
+    tags:
+      - shop=beauty
+      - shop=hairdresser
+    label: "Салоны красоты"
+  barber:
+    tags:
+      - shop=barber
+    label: "Барбершопы"
+  car_repair:
+    tags:
+      - shop=car_repair
+      - craft=car_repair
+      - service=vehicle:repair
+    label: "Автосервисы"
+
+excluded_tourism:
+  - tourism=hotel
+  - tourism=hostel
+  - tourism=guest_house
+  - tourism=motel
+  - tourism=camp_site
+
+fields:
+  base:
+    - name
+    - amenity
+    - shop
+    - craft
+    - tourism
+  address:
+    - addr:housenumber
+    - addr:street
+    - addr:city
+    - addr:suburb
+    - addr:postcode
+    - addr:full
+  contact:
+    - phone
+    - contact:phone
+    - contact:mobile
+    - contact:fax
+    - email
+    - contact:email
+    - website
+    - contact:website
+    - contact:facebook
+    - contact:instagram
+    - contact:twitter
+    - contact:linkedin
+    - contact:youtube
+    - contact:whatsapp
+    - contact:telegram
+    - contact:skype
+    - contact:name
+  other:
+    - opening_hours
+    - operator
+    - brand
+    - cuisine
+    - wheelchair
+    - outdoor_seating
+    - takeaway
+    - delivery

@@ -1,0 +1,127 @@
+# Веса для расчёта приоритета (Шаг 3)
+# Чем выше сумма, тем выше приоритет для ручной проверки
+
+weights:
+  # Контактная информация
+  has_phone: 15           # Есть телефон (phone или contact:phone)
+  has_mobile: 10          # Есть мобильный (contact:mobile)
+  has_email: 12           # Есть email (email или contact:email)
+  has_website_field: 5    # Заполнено поле website (даже если соцсеть - группа B)
+
+  # Рабочие часы
+  has_opening_hours: 10   # Есть opening_hours
+
+  # Соцсети
+  has_social: 8           # Есть хоть одна соцсеть (instagram, facebook, etc)
+  has_multiple_social: 5  # Есть 2+ соцсети
+
+  # Город (размер рынка)
+  large_city: 10          # Кишинев, Бельцы
+  medium_city: 6          # Кахул, Орхей, Сороки, Унгень, Тараклия, Чимишлия
+  small_city: 3           # Остальные райцентры
+  village: 1              # Сёла
+
+  # Адрес
+  has_full_address: 8     # Есть addr:street + addr:housenumber
+  has_street_only: 4      # Есть только addr:street
+  has_city_only: 2        # Есть только addr:city
+
+  # Качество данных
+  has_name: 5             # Есть название (name)
+  name_length_bonus: 0.1  # Бонус за длину названия (макс +5)
+  has_brand: 3            # Есть brand (сетевое заведение)
+  has_operator: 3         # Есть operator
+  has_cuisine: 2          # Есть cuisine (для еды)
+
+  # Категория (некоторые категории более перспективны)
+  category_bonus:
+    restaurant: 5
+    cafe: 4
+    beauty: 4
+    barber: 3
+    bar: 3
+    bakery: 2
+    pastry: 2
+    car_repair: 3
+
+# Пороговые значения
+thresholds:
+  high_priority: 50       # Высокий приоритет - проверять в первую очередь
+  medium_priority: 30     # Средний приоритет
+  low_priority: 0         # Низкий приоритет
+
+# Настройки для группировки городов
+city_tiers:
+  large:
+    - "кишинев"
+    - "chisinau"
+    - "chișinău"
+    - "бельцы"
+    - "balti"
+    - "bălți"
+  medium:
+    - "кахул"
+    - "cahul"
+    - "орхей"
+    - "orhei"
+    - "сороки"
+    - "soroca"
+    - "унгень"
+    - "ungheni"
+    - "тараклия"
+    - "taraclia"
+    - "чимишлия"
+    - "cimișlia"
+    - "вышковэт"
+    - "edineț"
+    - "эдинец"
+    - "дружени"
+    - "drochia"
+    - "флорешты"
+    - "florești"
+    - "ряшков"
+    - "rișcani"
+    - "сынжерей"
+    - "sângerei"
+    - "страшень"
+    - "strășeni"
+    - "солдэнешты"
+    - "soldanesti"
+    - "фалешты"
+    - "fălești"
+    - "глядень"
+    - "glodeni"
+    - "хынчешты"
+    - "hîncești"
+    - "яловень"
+    - "ialoveni"
+    - "леова"
+    - "leova"
+    - "ниспорены"
+    - "nisperești"
+    - "окница"
+    - "ocnița"
+    - "резина"
+    - "rezina"
+    - "рышканы"
+    - "râșcani"
+    - "калраши"
+    - "călașani"
+    - "кантемир"
+    - "cantemir"
+    - "басарабеаска"
+    - "basarabeasca"
+    - "штефан-водэ"
+    - "stefan-voda"
+    - "теленешты"
+    - "telenești"
+    - "криулены"
+    - "criuleni"
+    - "дондюшаны"
+    - "dondușeni"
+    - "бричаны"
+    - "briceni"
+    - "гладень"
+    - "glodeni"
+    - "флорешты"
+    - "florești"
